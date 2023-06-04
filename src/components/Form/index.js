@@ -5,6 +5,7 @@ import {
     View, 
     TouchableOpacity,
     Vibration,
+    Keyboard,
  } from "react-native";
 import ResultImc from "./ResultImc";
 import styles from "./style";
@@ -19,8 +20,8 @@ export default function Form() {
     const [textButton, setTextButton] = useState('Calcular')
     const [errorMessage, setErrorMessage] = useState(null)
 
-    function imcCalculator() {
-        
+    function imcCalculator() {  
+        Keyboard.dismiss()      
         return setImc((weight/(height*height)).toFixed(2))
     }
 
