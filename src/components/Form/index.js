@@ -13,6 +13,7 @@ export default function Form() {
     const [textButton, setTextButton] = useState('Calcular')
 
     function imcCalculator() {
+        
         return setImc((weight/(height*height)).toFixed(2))
     }
 
@@ -51,8 +52,7 @@ export default function Form() {
                 keyboardType="numeric"
                 />
 
-                <TouchableOpacity
-            
+                <TouchableOpacity            
                 style={styles.buttonCalculator}
                 onPress={() => {
                     validationImc()
